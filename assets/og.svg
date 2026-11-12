@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05070c"/>
+      <stop offset="1" stop-color="#0a1019"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#14F195"/>
+      <stop offset=".5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#9945FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".8" cy="0" r=".8">
+      <stop offset="0" stop-color="#14F195" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#14F195" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M64 0H0V64" fill="none" stroke="#ffffff" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g font-family="'Space Grotesk','Inter',sans-serif" fill="#e8edf6">
+    <text x="80" y="118" font-family="'JetBrains Mono',monospace" font-size="18" letter-spacing="5" fill="#14F195">PORTFOLIO · ARDUINO UNO Q · 2026</text>
+    <text x="80" y="238" font-size="88" font-weight="700" letter-spacing="-4">Seis ideas.</text>
+    <text x="80" y="330" font-size="88" font-weight="700" letter-spacing="-4" fill="url(#accent)">Una placa.</text>
+    <text x="80" y="422" font-size="88" font-weight="700" letter-spacing="-4">Cero humo.</text>
+  </g>
+
+  <g font-family="'Inter',sans-serif" fill="#9ca9bd">
+    <text x="80" y="492" font-size="23">Pagos on-chain · visión artificial · voz · LLM local · automatización.</text>
+    <text x="80" y="526" font-size="23">Documentación completa, código abierto y límites contados sin marketing.</text>
+  </g>
+
+  <g transform="translate(80,565)">
+    <rect x="0" y="0" width="1040" height="1" fill="#ffffff" fill-opacity=".10"/>
+    <g font-family="'JetBrains Mono',monospace" font-size="16" fill="#8492a8">
+      <text x="0" y="36">wanderc137.github.io</text>
+      <text x="880" y="36" fill="#14F195">6 PROYECTOS · MIT</text>
+    </g>
+  </g>
+
+  <g transform="translate(760,150)">
+    <rect x="0" y="0" width="360" height="300" rx="26" fill="#0b1019" stroke="#ffffff" stroke-opacity=".14"/>
+    <rect x="0" y="0" width="360" height="6" rx="3" fill="url(#accent)"/>
+    <g font-family="'JetBrains Mono',monospace" font-size="13" fill="#7f8ca2">
+      <text x="28" y="42">wanderc137.github.io</text>
+      <circle cx="314" cy="37" r="6" fill="#14F195"/>
+      <text x="326" y="42" fill="#14F195">LIVE</text>
+    </g>
+    <g font-family="'Space Grotesk',sans-serif" font-size="22" font-weight="600" fill="#e8edf6">
+      <text x="34" y="96">Vending Solana</text>
+      <text x="34" y="152">UnoQ</text>
+      <text x="34" y="208">JarvisCAN</text>
+      <text x="34" y="264">JarvisUNOQ</text>
+      <text x="250" y="96" fill="#8b96ab" font-size="16" font-family="'JetBrains Mono',monospace">USDC</text>
+      <text x="250" y="152" fill="#8b96ab" font-size="16" font-family="'JetBrains Mono',monospace">GPIO</text>
+      <text x="250" y="208" fill="#8b96ab" font-size="16" font-family="'JetBrains Mono',monospace">OBD-II</text>
+      <text x="250" y="264" fill="#8b96ab" font-size="16" font-family="'JetBrains Mono',monospace">LLM</text>
+    </g>
+    <g fill="none" stroke-width="2">
+      <rect x="18" y="74" width="4" height="30" rx="2" fill="#14F195" stroke="none"/>
+      <rect x="18" y="130" width="4" height="30" rx="2" fill="#00D8C0" stroke="none"/>
+      <rect x="18" y="186" width="4" height="30" rx="2" fill="#FFB020" stroke="none"/>
+      <rect x="18" y="242" width="4" height="30" rx="2" fill="#9B8CFF" stroke="none"/>
+    </g>
+  </g>
+</svg>

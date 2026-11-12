@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>wanderc137 · Portfolio Arduino UNO Q</title>
+<meta name="description" content="Seis proyectos reales sobre Arduino UNO Q: pagos on-chain, visión artificial, voz, LLM local y automatización. Documentación completa, código abierto y límites contados sin marketing.">
+<meta name="author" content="wanderc137">
+<meta property="og:type" content="website">
+<meta property="og:title" content="wanderc137 · Portfolio Arduino UNO Q">
+<meta property="og:description" content="Seis ideas. Una placa. Cero humo. Pagos, visión, voz y automatización sobre Arduino UNO Q.">
+<meta property="og:url" content="https://wanderc137.github.io/">
+<meta property="og:image" content="https://wanderc137.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="wanderc137 · Portfolio Arduino UNO Q">
+<meta name="twitter:description" content="Seis ideas. Una placa. Cero humo. Pagos, visión, voz y automatización sobre Arduino UNO Q.">
+<meta name="twitter:image" content="https://wanderc137.github.io/assets/og.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2305070c'/><rect x='22' y='22' width='56' height='56' rx='14' fill='none' stroke='%2314F195' stroke-width='7'/><circle cx='50' cy='50' r='9' fill='%2314F195'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#05070c;--ink:#e8edf6;--muted:#8b96ab;--line:rgba(255,255,255,.09);
+  --card:#0b1019;--card2:#0e1521;--green:#14F195;--violet:#9945FF;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-color:#2a3448 #05070c;scrollbar-width:thin}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#05070c}
+::-webkit-scrollbar-thumb{background:#2a3448;border-radius:999px;border:2px solid #05070c}
+::-webkit-scrollbar-thumb:hover{background:#3a4a66}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+::selection{background:var(--green);color:#04110c}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.03;letter-spacing:-.035em;margin:0}
+p{margin:0}
+.mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
+.wrap{width:min(1200px,calc(100% - 48px));margin:0 auto}
+
+.grid-overlay{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:64px 64px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 78%);
+  -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 78%);
+}
+.glow{position:fixed;z-index:0;pointer-events:none;filter:blur(90px);opacity:.20;width:720px;height:720px;border-radius:50%}
+.glow.one{top:-360px;left:-220px;background:var(--green)}
+.glow.two{top:520px;right:-320px;background:var(--violet);opacity:.16}
+
+.nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:rgba(5,7,12,.72);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:700;font-size:17px;letter-spacing:-.02em}
+.brand-mark{width:38px;height:38px;border-radius:11px;background:linear-gradient(145deg,rgba(20,241,149,.18),rgba(153,69,255,.16));border:1px solid rgba(255,255,255,.13);display:grid;place-items:center;flex-shrink:0}
+.brand-mark svg{width:21px;height:21px;fill:none;stroke:var(--green);stroke-width:1.6}
+.brand small{display:block;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-top:2px}
+.nav-links{display:flex;align-items:center;gap:8px}
+.nav-links a{font-size:13px;color:var(--muted);padding:9px 13px;border-radius:9px;transition:.2s}
+.nav-links a:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+.nav-links a.ghost{border:1px solid var(--line);color:var(--ink)}
+.nav-links a.ghost:hover{border-color:rgba(20,241,149,.45);background:rgba(20,241,149,.08)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:8px 10px;cursor:pointer}
+
+.hero{padding:84px 0 72px;position:relative;z-index:1}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+.kicker{display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:22px}
+.kicker .dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.hero h1{font-size:clamp(46px,6.2vw,88px);font-weight:700;max-width:760px}
+.grad{background:linear-gradient(92deg,var(--green) 0%,#22D3EE 48%,var(--violet) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:clamp(17px,1.6vw,20px);color:#b7c1d4;max-width:620px;margin-top:26px;line-height:1.6}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 21px;border-radius:11px;font-size:14px;font-weight:600;border:1px solid transparent;transition:.22s;white-space:nowrap}
+.btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8}
+.btn-primary{background:linear-gradient(135deg,var(--green),#0bd6a0);color:#04110c;box-shadow:0 12px 34px rgba(20,241,149,.22)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(20,241,149,.32)}
+.btn-ghost{border-color:var(--line);background:rgba(255,255,255,.03);color:var(--ink)}
+.btn-ghost:hover{border-color:rgba(20,241,149,.4);background:rgba(20,241,149,.07);transform:translateY(-2px)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{font-size:11px;color:#aab6c9;border:1px solid var(--line);background:rgba(255,255,255,.03);padding:6px 11px;border-radius:999px;font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
+.chip b{color:var(--green);font-weight:500}
+
+.board{position:relative;background:linear-gradient(160deg,rgba(15,22,35,.94),rgba(7,11,18,.96));border:1px solid rgba(255,255,255,.11);border-radius:20px;padding:17px;box-shadow:0 34px 90px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.06);overflow:hidden}
+.board::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 0%,rgba(20,241,149,.10),transparent 55%);pointer-events:none}
+.board-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:2px 4px 14px;border-bottom:1px solid rgba(255,255,255,.07);font-family:'JetBrains Mono',monospace;font-size:10px;color:#7f8ca2;letter-spacing:.04em}
+.board-top .live{display:flex;align-items:center;gap:7px;color:var(--green)}
+.led{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);animation:pulse 2.4s infinite}
+.board-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px;padding:14px 0}
+.mini{position:relative;border:1px solid rgba(255,255,255,.08);border-radius:11px;padding:12px 11px;background:rgba(255,255,255,.025);overflow:hidden;transition:.2s}
+.mini:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.16)}
+.mini::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c)}
+.mini .n{font-family:'JetBrains Mono',monospace;font-size:9px;color:#7e8aa0;letter-spacing:.12em}
+.mini .t{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;line-height:1.22;margin-top:4px;color:#e9eef7}
+.mini .s{font-size:10px;color:#8492a8;margin-top:3px;line-height:1.35}
+.board-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 4px 0;border-top:1px solid rgba(255,255,255,.07);font-family:'JetBrains Mono',monospace;font-size:9px;color:#6f7c92;letter-spacing:.06em}
+.board-foot b{color:#aab6c9;font-weight:500}
+
+.section{padding:82px 0;position:relative;z-index:1}
+.section-head{max-width:780px;margin-bottom:42px}
+.section-head .kicker{margin-bottom:16px;color:var(--green)}
+.section-head h2{font-size:clamp(32px,4vw,52px)}
+.section-head p{color:var(--muted);font-size:17px;margin-top:18px;max-width:680px}
+
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project{
+  position:relative;background:linear-gradient(160deg,var(--card),var(--card2));
+  border:1px solid var(--line);border-radius:18px;padding:24px;
+  display:flex;flex-direction:column;min-height:360px;overflow:hidden;
+  transition:transform .25s,border-color .25s,box-shadow .25s;
+}
+.project::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--a),var(--b));opacity:.9}
+.project::after{content:"";position:absolute;width:240px;height:240px;right:-100px;top:-100px;border-radius:50%;background:var(--a);filter:blur(70px);opacity:.10;pointer-events:none}
+.project:hover{transform:translateY(-5px);border-color:rgba(255,255,255,.18);box-shadow:0 26px 60px rgba(0,0,0,.34)}
+.project-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+.project .num{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--a);letter-spacing:.16em}
+.project .kind{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#8996aa;border:1px solid rgba(255,255,255,.09);padding:5px 9px;border-radius:999px;background:rgba(255,255,255,.02)}
+.project h3{font-size:clamp(22px,2.4vw,30px);margin-bottom:11px;position:relative;z-index:1}
+.project p{color:#aab5c7;font-size:14px;line-height:1.58;max-width:94%;position:relative;z-index:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px;position:relative;z-index:1}
+.tags span{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.05em;color:#98a6bb;border:1px solid rgba(255,255,255,.08);padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.02)}
+.project-foot{margin-top:auto;padding-top:22px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.07);position:relative;z-index:1}
+.metric{font-family:'JetBrains Mono',monospace;font-size:10px;color:#7f8ca2;letter-spacing:.04em}
+.metric b{color:var(--a);font-weight:500}
+.project-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--a);white-space:nowrap}
+.project-link svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;transition:transform .2s}
+.project-link:hover svg{transform:translate(2px,-2px)}
+.project-actions{display:flex;align-items:center;gap:12px}
+.repo-link{font-family:'JetBrains Mono',monospace;font-size:10px;color:#7f8ca2;letter-spacing:.02em;transition:.2s}
+.repo-link:hover{color:var(--ink)}
+
+.method{background:linear-gradient(180deg,transparent,rgba(255,255,255,.018),transparent);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pillar{background:rgba(255,255,255,.025);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.22s}
+.pillar:hover{background:rgba(255,255,255,.04);border-color:rgba(20,241,149,.25)}
+.pillar .pn{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--green);letter-spacing:.16em;margin-bottom:18px}
+.pillar h3{font-size:20px;margin-bottom:9px}
+.pillar p{font-size:13.5px;color:#a5b1c4;line-height:1.6}
+
+.cta{padding:86px 0 96px;position:relative;z-index:1}
+.cta-card{position:relative;overflow:hidden;text-align:center;background:linear-gradient(145deg,rgba(20,241,149,.09),rgba(153,69,255,.10));border:1px solid rgba(255,255,255,.13);border-radius:22px;padding:58px 32px}
+.cta-card::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--green);filter:blur(110px);opacity:.10;top:-220px;left:50%;transform:translateX(-50%)}
+.cta-card .kicker{justify-content:center;color:#b9c5d6}
+.cta-card h2{font-size:clamp(30px,4vw,48px);max-width:720px;margin:0 auto}
+.cta-card p{color:#b3bfd1;max-width:620px;margin:18px auto 28px;font-size:15.5px}
+.cta-card .hero-actions{justify-content:center;margin-top:0}
+
+footer{border-top:1px solid var(--line);padding:26px 0;position:relative;z-index:1}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:12px;color:#7f8ca2}
+.foot a{color:#aab6c9;transition:.2s}
+.foot a:hover{color:var(--green)}
+.foot .mono{font-size:10px;letter-spacing:.04em}
+
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero{padding-top:60px}
+  .board{max-width:560px}
+  .projects{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .project{min-height:330px}
+}
+@media(max-width:720px){
+  .nav-links{display:none}
+  .nav-links.open{display:flex;position:absolute;top:76px;left:24px;right:24px;flex-direction:column;align-items:stretch;background:#0a0f18;border:1px solid var(--line);border-radius:14px;padding:8px;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+  .nav-links.open a{padding:12px}
+  .nav-toggle{display:block}
+  .wrap{width:calc(100% - 36px)}
+  .hero h1{font-size:clamp(42px,11vw,64px)}
+  .lead{font-size:16px}
+  .section{padding:62px 0}
+  .board-grid{grid-template-columns:1fr 1fr}
+  .project{padding:20px}
+  .foot{flex-direction:column;align-items:flex-start;gap:10px}
+}
+@media(max-width:420px){
+  .board-grid{grid-template-columns:1fr}
+  .hero-actions .btn{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .kicker .dot,.led{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="grid-overlay"></div>
+<div class="glow one"></div>
+<div class="glow two"></div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/><circle cx="12" cy="12" r="2.5"/></svg></span>
+      <span>wanderc137<small>Arduino UNO Q · Portfolio</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <nav class="nav-links" aria-label="Navegación">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#metodo">Método</a>
+      <a href="#contacto">Contacto</a>
+      <a class="ghost" href="https://github.com/wanderc137" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="reveal">
+          <div class="kicker"><span class="dot"></span> Portfolio · Arduino UNO Q · 2026</div>
+          <h1>Seis ideas.<br><span class="grad">Una placa.</span><br>Cero humo.</h1>
+          <p class="lead">Pagos on-chain, visión artificial, voz, LLM local y automatización. Seis proyectos construidos sobre Arduino UNO Q, documentados de punta a punta y abiertos para leer, correr y romper.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyectos">Ver los seis proyectos <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-ghost" href="https://github.com/wanderc137" target="_blank" rel="noopener">Explorar GitHub <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          </div>
+          <div class="hero-meta">
+            <span class="chip"><b>6</b> proyectos</span>
+            <span class="chip"><b>100%</b> documentados</span>
+            <span class="chip"><b>MIT</b> open source</span>
+            <span class="chip"><b>0</b> humo</span>
+          </div>
+        </div>
+
+        <div class="board reveal" aria-label="Resumen de los seis proyectos">
+          <div class="board-top"><span>wanderc137.github.io</span><span class="live"><span class="led"></span> LIVE</span></div>
+          <div class="board-grid">
+            <a class="mini" style="--c:#14F195" href="https://wanderc137.github.io/vending-solana-unoq/" target="_blank" rel="noopener"><div class="n">01 · PAGOS</div><div class="t">Vending Solana</div><div class="s">USDC sin datáfono</div></a>
+            <a class="mini" style="--c:#00D8C0" href="https://wanderc137.github.io/UnoQ/" target="_blank" rel="noopener"><div class="n">02 · HARDWARE</div><div class="t">UnoQ</div><div class="s">Dos cerebros, un pin</div></a>
+            <a class="mini" style="--c:#FFB020" href="https://wanderc137.github.io/JarvisCAN/" target="_blank" rel="noopener"><div class="n">03 · AUTOMOCIÓN</div><div class="t">JarvisCAN</div><div class="s">El auto que habla</div></a>
+            <a class="mini" style="--c:#9B8CFF" href="https://wanderc137.github.io/JarvisUNOQ/" target="_blank" rel="noopener"><div class="n">04 · IA LOCAL</div><div class="t">JarvisUNOQ</div><div class="s">LLM sin nube</div></a>
+            <a class="mini" style="--c:#22D3EE" href="https://wanderc137.github.io/AnalizadorRostroUNOQ-v2/" target="_blank" rel="noopener"><div class="n">05 · VISIÓN</div><div class="t">Analizador</div><div class="s">Rostros, edad y género</div></a>
+            <a class="mini" style="--c:#7CFF6B" href="https://wanderc137.github.io/GestureCubeUNOQ/" target="_blank" rel="noopener"><div class="n">06 · INTERACCIÓN</div><div class="t">GestureCube</div><div class="s">El cubo en tu mano</div></a>
+          </div>
+          <div class="board-foot"><span>Debian 13 · Zephyr · <b>STM32U585</b></span><span>v1.0</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="proyectos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="kicker">01 — Proyectos</div>
+        <h2>Seis formas de convertir una placa en producto.</h2>
+        <p>No son demos de laboratorio: cada proyecto tiene documentación de usuario, guía de desarrollador, diagramas, decisiones técnicas y una lista honesta de lo que falta.</p>
+      </div>
+
+      <div class="projects">
+        <article class="project reveal" style="--a:#14F195;--b:#9945FF">
+          <div class="project-top"><span class="num">01</span><span class="kind">Pagos on-chain</span></div>
+          <h3>Vending Solana <span class="grad">USDC</span></h3>
+          <p>Una máquina expendedora que cobra USDC con Solana Pay y dispensa con el STM32U585. Sin datáfono, sin custodia y sin clave privada en la placa.</p>
+          <div class="tags"><span>Solana Pay</span><span>USDC</span><span>FastAPI</span><span>UNO Q</span></div>
+          <div class="project-foot">
+            <span class="metric"><b>8 SKUs</b> · &lt;2 s</span>
+            <span class="project-actions"><a class="repo-link" href="https://github.com/wanderc137/vending-solana-unoq" target="_blank" rel="noopener">Código</a><a class="project-link" href="https://wanderc137.github.io/vending-solana-unoq/" target="_blank" rel="noopener">Ver sitio <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--a:#00D8C0;--b:#2E7DFF">
+          <div class="project-top"><span class="num">02</span><span class="kind">Hardware</span></div>
+          <h3>UnoQ <span class="grad">dos cerebros</span></h3>
+          <p>El Linux embebido y el MCU en la misma placa. Blink, control GPIO y el puente exacto entre Python y el mundo físico, con pinout y protocolo documentados.</p>
+          <div class="tags"><span>MPU/MCU</span><span>GPIO</span><span>Serial CDC</span><span>Zephyr</span></div>
+          <div class="project-foot">
+            <span class="metric"><b>2 ejemplos</b> · 20 pines</span>
+            <span class="project-actions"><a class="repo-link" href="https://github.com/wanderc137/UnoQ" target="_blank" rel="noopener">Código</a><a class="project-link" href="https://wanderc137.github.io/UnoQ/" target="_blank" rel="noopener">Ver sitio <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--a:#FFB020;--b:#4D7CFE">
+          <div class="project-top"><span class="num">03</span><span class="kind">Automoción</span></div>
+          <h3>JarvisCAN <span class="grad">el auto habla</span></h3>
+          <p>OBD-II, SQLite, reglas de alerta, voz con Piper y un panel web para ver lo que el motor siente. Simulador incluido para trabajar sin CAN real.</p>
+          <div class="tags"><span>OBD-II</span><span>SQLite</span><span>Piper TTS</span><span>Ollama</span></div>
+          <div class="project-foot">
+            <span class="metric"><b>19 PIDs</b> · 6 reglas</span>
+            <span class="project-actions"><a class="repo-link" href="https://github.com/wanderc137/JarvisCAN" target="_blank" rel="noopener">Código</a><a class="project-link" href="https://wanderc137.github.io/JarvisCAN/" target="_blank" rel="noopener">Ver sitio <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--a:#9B8CFF;--b:#22D3EE">
+          <div class="project-top"><span class="num">04</span><span class="kind">IA local</span></div>
+          <h3>JarvisUNOQ <span class="grad">sin nube</span></h3>
+          <p>Qwen2.5 corriendo local en 3,6 GiB, con chat por consola y respuestas en tiempo real. Sin API keys, sin llamadas a Internet y sin depender de un servidor ajeno.</p>
+          <div class="tags"><span>Ollama</span><span>Qwen2.5</span><span>LLM local</span><span>Debian 13</span></div>
+          <div class="project-foot">
+            <span class="metric"><b>3,6 GiB</b> · 16 tok/s</span>
+            <span class="project-actions"><a class="repo-link" href="https://github.com/wanderc137/JarvisUNOQ" target="_blank" rel="noopener">Código</a><a class="project-link" href="https://wanderc137.github.io/JarvisUNOQ/" target="_blank" rel="noopener">Ver sitio <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--a:#22D3EE;--b:#E879F9">
+          <div class="project-top"><span class="num">05</span><span class="kind">Visión</span></div>
+          <h3>Analizador <span class="grad">de rostro</span></h3>
+          <p>Detección con YuNet, seguimiento por IoU y estimación de edad y género con ONNX. Streaming MJPEG, UI en español y métricas reales, no promesas.</p>
+          <div class="tags"><span>OpenCV</span><span>YuNet</span><span>ONNX</span><span>FastAPI</span></div>
+          <div class="project-foot">
+            <span class="metric"><b>84,56%</b> género · ~15 fps</span>
+            <span class="project-actions"><a class="repo-link" href="https://github.com/wanderc137/AnalizadorRostroUNOQ-v2" target="_blank" rel="noopener">Código</a><a class="project-link" href="https://wanderc137.github.io/AnalizadorRostroUNOQ-v2/" target="_blank" rel="noopener">Ver sitio <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span>
+          </div>
+        </article>
+
+        <article class="project reveal" style="--a:#7CFF6B;--b:#22D3EE">
+          <div class="project-top"><span class="num">06</span><span class="kind">Interacción</span></div>
+          <h3>GestureCube <span class="grad">en tu mano</span></h3>
+          <p>MediaPipe en el navegador, 21 landmarks y un cubo 3D que gira con la mano. La inferencia ocurre en el cliente: cero frames enviados a Internet.</p>
+          <div class="tags"><span>MediaPipe</span><span>WASM</span><span>WebGL</span><span>MJPEG</span></div>
+          <div class="project-foot">
+            <span class="metric"><b>21</b> landmarks · 4 gestos</span>
+            <span class="project-actions"><a class="repo-link" href="https://github.com/wanderc137/GestureCubeUNOQ" target="_blank" rel="noopener">Código</a><a class="project-link" href="https://wanderc137.github.io/GestureCubeUNOQ/" target="_blank" rel="noopener">Ver sitio <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section method" id="metodo">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="kicker">02 — Método</div>
+        <h2>Documentación que se puede leer. Código que se puede correr.</h2>
+        <p>La diferencia entre una demo y un proyecto no es la cantidad de features: es saber qué hace, por qué está hecho así y dónde se rompe.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar reveal"><div class="pn">01</div><h3>Del problema al pin</h3><p>Cada proyecto arranca con un problema concreto y termina en un mapa de hardware, un protocolo y un comando reproducible. El diagrama no es decoración: es la arquitectura.</p></div>
+        <div class="pillar reveal"><div class="pn">02</div><h3>Decisiones, no folletos</h3><p>Los README explican qué se descartó, qué se rompió y por qué se eligió cada camino. Los límites y la deuda técnica están escritos, no escondidos.</p></div>
+        <div class="pillar reveal"><div class="pn">03</div><h3>Límites a la vista</h3><p>Las métricas salen de mediciones reales. Si algo no se pudo probar —una cámara, un CAN físico, un pago mainnet— se dice explícitamente y se explica qué falta.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="contacto">
+    <div class="wrap">
+      <div class="cta-card reveal">
+        <div class="kicker">¿Construimos algo?</div>
+        <h2>Tu idea puede ser el proyecto 07.</h2>
+        <p>Si te interesa llevar pagos, visión, voz o automatización a hardware propio, o querés una documentación así para tu producto, hablemos.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/wanderc137" target="_blank" rel="noopener">Hablemos en GitHub <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
+          <a class="btn btn-ghost" href="#proyectos">Volver a los proyectos</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 wanderc137 · Licencia MIT</span>
+    <span class="mono">Hardware real · documentación obsesiva · cero humo</span>
+    <span><a href="#proyectos">Proyectos</a> · <a href="https://github.com/wanderc137" target="_blank" rel="noopener">GitHub</a></span>
+  </div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('open')));
+</script>
+</body>
+</html>
