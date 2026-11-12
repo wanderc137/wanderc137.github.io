@@ -1,69 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#05070c"/>
-      <stop offset="1" stop-color="#0a1019"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#14F195"/>
-      <stop offset=".5" stop-color="#22D3EE"/>
-      <stop offset="1" stop-color="#9945FF"/>
-    </linearGradient>
-    <radialGradient id="glow" cx=".8" cy="0" r=".8">
-      <stop offset="0" stop-color="#14F195" stop-opacity=".22"/>
-      <stop offset="1" stop-color="#14F195" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
-      <path d="M64 0H0V64" fill="none" stroke="#ffffff" stroke-opacity=".055" stroke-width="1"/>
-    </pattern>
-  </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#grid)"/>
-  <rect width="1200" height="630" fill="url(#glow)"/>
-
-  <g font-family="'Space Grotesk','Inter',sans-serif" fill="#e8edf6">
-    <text x="80" y="118" font-family="'JetBrains Mono',monospace" font-size="18" letter-spacing="5" fill="#14F195">PORTFOLIO · ARDUINO UNO Q · 2026</text>
-    <text x="80" y="238" font-size="88" font-weight="700" letter-spacing="-4">Seis ideas.</text>
-    <text x="80" y="330" font-size="88" font-weight="700" letter-spacing="-4" fill="url(#accent)">Una placa.</text>
-    <text x="80" y="422" font-size="88" font-weight="700" letter-spacing="-4">Cero humo.</text>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14F195"/><stop offset="1" stop-color="#9945FF"/></linearGradient><radialGradient id="r" cx="80%" cy="0%" r="70%"><stop offset="0" stop-color="#14F195" stop-opacity=".28"/><stop offset="1" stop-color="#14F195" stop-opacity="0"/></radialGradient></defs>
+  <rect width="1200" height="630" fill="#05070C"/><rect width="1200" height="630" fill="url(#r)"/>
+  <g stroke="rgba(255,255,255,.05)"><path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200M0 300H1200M0 360H1200M0 420H1200M0 480H1200M0 540H1200M0 600H1200M60 0V630M120 0V630M180 0V630M240 0V630M300 0V630M360 0V630M420 0V630M480 0V630M540 0V630M600 0V630M660 0V630M720 0V630M780 0V630M840 0V630M900 0V630M960 0V630M1020 0V630M1080 0V630M1140 0V630"/></g>
+  <rect x="60" y="52" width="46" height="46" rx="13" fill="url(#g)"/><circle cx="83" cy="75" r="7" fill="#05100C"/>
+  <text x="124" y="70" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#E8EDF6" letter-spacing="3">WANDERC137</text>
+  <text x="124" y="92" font-family="DejaVu Sans Mono, monospace" font-size="13" fill="#8EA0B5" letter-spacing="2">PORTFOLIO · 21 PROYECTOS</text>
+  <text x="90" y="250" font-family="DejaVu Sans, Arial, sans-serif" font-size="70" font-weight="700" fill="#F3F7FC" letter-spacing="-2">21 proyectos.</text>
+  <text x="90" y="332" font-family="DejaVu Sans, Arial, sans-serif" font-size="70" font-weight="700" fill="#F3F7FC" letter-spacing="-2">Una sola carpeta.</text>
+  <text x="92" y="410" font-family="DejaVu Sans, Arial, sans-serif" font-size="27" fill="#9FB0C6">IA · conectividad · hardware · autoatención</text>
+  <g font-family="DejaVu Sans Mono, monospace" font-size="17" fill="#B9C7D9">
+    <rect x="92" y="500" width="170" height="38" rx="19" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="108" y="525">21 GitHub Pages</text>
+    <rect x="274" y="500" width="180" height="38" rx="19" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="290" y="525">5 categorías</text>
+    <rect x="466" y="500" width="210" height="38" rx="19" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.18)"/><text x="482" y="525">100% documentado</text>
   </g>
-
-  <g font-family="'Inter',sans-serif" fill="#9ca9bd">
-    <text x="80" y="492" font-size="23">Pagos on-chain · visión artificial · voz · LLM local · automatización.</text>
-    <text x="80" y="526" font-size="23">Documentación completa, código abierto y límites contados sin marketing.</text>
-  </g>
-
-  <g transform="translate(80,565)">
-    <rect x="0" y="0" width="1040" height="1" fill="#ffffff" fill-opacity=".10"/>
-    <g font-family="'JetBrains Mono',monospace" font-size="16" fill="#8492a8">
-      <text x="0" y="36">wanderc137.github.io</text>
-      <text x="880" y="36" fill="#14F195">6 PROYECTOS · MIT</text>
-    </g>
-  </g>
-
-  <g transform="translate(760,150)">
-    <rect x="0" y="0" width="360" height="300" rx="26" fill="#0b1019" stroke="#ffffff" stroke-opacity=".14"/>
-    <rect x="0" y="0" width="360" height="6" rx="3" fill="url(#accent)"/>
-    <g font-family="'JetBrains Mono',monospace" font-size="13" fill="#7f8ca2">
-      <text x="28" y="42">wanderc137.github.io</text>
-      <circle cx="314" cy="37" r="6" fill="#14F195"/>
-      <text x="326" y="42" fill="#14F195">LIVE</text>
-    </g>
-    <g font-family="'Space Grotesk',sans-serif" font-size="22" font-weight="600" fill="#e8edf6">
-      <text x="34" y="96">Vending Solana</text>
-      <text x="34" y="152">UnoQ</text>
-      <text x="34" y="208">JarvisCAN</text>
-      <text x="34" y="264">JarvisUNOQ</text>
-      <text x="250" y="96" fill="#8b96ab" font-size="16" font-family="'JetBrains Mono',monospace">USDC</text>
-      <text x="250" y="152" fill="#8b96ab" font-size="16" font-family="'JetBrains Mono',monospace">GPIO</text>
-      <text x="250" y="208" fill="#8b96ab" font-size="16" font-family="'JetBrains Mono',monospace">OBD-II</text>
-      <text x="250" y="264" fill="#8b96ab" font-size="16" font-family="'JetBrains Mono',monospace">LLM</text>
-    </g>
-    <g fill="none" stroke-width="2">
-      <rect x="18" y="74" width="4" height="30" rx="2" fill="#14F195" stroke="none"/>
-      <rect x="18" y="130" width="4" height="30" rx="2" fill="#00D8C0" stroke="none"/>
-      <rect x="18" y="186" width="4" height="30" rx="2" fill="#FFB020" stroke="none"/>
-      <rect x="18" y="242" width="4" height="30" rx="2" fill="#9B8CFF" stroke="none"/>
-    </g>
-  </g>
+  <text x="1110" y="598" text-anchor="end" font-family="DejaVu Sans Mono, monospace" font-size="17" fill="#7F8EA3">wanderc137.github.io</text>
 </svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFB020"/><stop offset="1" stop-color="#7CFF6B"/></linearGradient><radialGradient id="r" cx="88%" cy="8%" r="70%"><stop offset="0" stop-color="#FFB020" stop-opacity=".28"/><stop offset="1" stop-color="#FFB020" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="630" fill="#05070c"/><rect width="1200" height="630" fill="url(#r)"/>
+<g stroke="#ffffff" stroke-opacity=".06"><path d="M0 120h1200M0 240h1200M0 360h1200M0 480h1200M120 0v630M240 0v630M360 0v630M480 0v630M600 0v630M720 0v630M840 0v630M960 0v630M1080 0v630"/></g>
+<text x="70" y="98" fill="#FFB020" font-family="monospace" font-size="20" letter-spacing="5">WANDERC137 · PORTFOLIO 2026</text>
+<text x="70" y="230" fill="#e8edf6" font-family="Arial, sans-serif" font-size="78" font-weight="700">IoT &amp; Hardware</text>
+<text x="70" y="300" fill="#9aa8bc" font-family="Arial, sans-serif" font-size="30">Redes, sensores y dispositivos</text>
+<rect x="70" y="360" width="250" height="58" rx="10" fill="url(#g)"/><text x="95" y="398" fill="#04110c" font-family="monospace" font-size="20" font-weight="700">07 PROYECTOS</text>
+<text x="70" y="520" fill="#6f7f96" font-family="monospace" font-size="18">arduino-unoq · iot · software</text>
+<circle cx="1080" cy="520" r="54" fill="none" stroke="#FFB020" stroke-width="2"/><path d="M1055 520h50M1085 500l20 20-20 20" fill="none" stroke="#FFB020" stroke-width="3"/>
+</svg>
