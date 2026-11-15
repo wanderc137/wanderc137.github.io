@@ -1,14 +1,13 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IoT &amp; Hardware · wanderc137</title>
-<meta name="description" content="Siete sistemas que hablan con el mundo real: ESP-NOW, LoRaWAN, routers industriales, acelerómetros, Zigbee y hardware de autoatención.">
-<meta name="author" content="wanderc137">
-<meta property="og:type" content="website"><meta property="og:title" content="IoT &amp; Hardware · wanderc137"><meta property="og:description" content="Siete sistemas que hablan con el mundo real: ESP-NOW, LoRaWAN, routers industriales, acelerómetros, Zigbee y hardware de autoatención."><meta property="og:url" content="https://wanderc137.github.io/iot/"><meta property="og:image" content="https://wanderc137.github.io/assets/og.png">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="IoT &amp; Hardware · wanderc137"><meta name="twitter:description" content="Siete sistemas que hablan con el mundo real: ESP-NOW, LoRaWAN, routers industriales, acelerómetros, Zigbee y hardware de autoatención."><meta name="twitter:image" content="https://wanderc137.github.io/assets/og.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2305070c'/><path d='M28 64V36l22-12 22 12v28L50 76 28 64z' fill='none' stroke='%2314F195' stroke-width='6'/><circle cx='50' cy='50' r='7' fill='%2314F195'/></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Portfolio de proyectos de wanderc137: Arduino UNO Q, IoT & Hardware y Software & IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#05070c;--ink:#e8edf6;--muted:#8b96ab;--line:rgba(255,255,255,.09);--card:#0b1019;--green:#14F195;--violet:#9945FF}
 *,*::before,*::after{box-sizing:border-box}
@@ -81,100 +80,86 @@ footer{border-top:1px solid var(--line);padding:42px 0;position:relative;z-index
 @media(max-width:640px){.wrap{width:calc(100% - 32px)}.nav-links a:not(.ghost){display:none}.hero{padding-top:60px}.portals,.board-grid{grid-template-columns:1fr}.hero h1{font-size:44px}.stats-inner{grid-template-columns:1fr 1fr}.cta-card{padding:34px 22px}.portal{min-height:390px}}
 </style>
 </head>
-<body>
+<body style="--green:#14F195;--violet:#9945FF">
 <div class="grid-overlay"></div><div class="glow one"></div><div class="glow two"></div>
 <header class="nav"><div class="wrap nav-inner">
-  <a class="brand" href="https://wanderc137.github.io/"><span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M12 3 3 8v8l9 5 9-5V8l-9-5z"/><path d="M3 8l9 5 9-5M12 13v10"/></svg></span><span>wanderc137<small>Portfolio · 21 proyectos</small></span></a>
-  <nav class="nav-links"><a href="https://wanderc137.github.io/arduino-unoq/">Arduino UNO Q</a><a href="https://wanderc137.github.io/iot/" style="color:var(--ink)">IoT & Hardware</a><a href="https://wanderc137.github.io/software/">Software & IA</a><a class="ghost" href="https://github.com/wanderc137" target="_blank" rel="noopener">GitHub</a></nav>
+  <a class="brand" href="../"><span class="brand-mark"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/><circle cx="12" cy="12" r="2.5"/></svg></span><span>wanderc137<small>Portfolio · 3 secciones</small></span></a>
+  <nav class="nav-links"><a href="../">Portada</a><a href="../#secciones">Secciones</a><a class="ghost" href="https://github.com/wanderc137" target="_blank" rel="noopener">GitHub</a></nav>
 </div></header>
 <main id="top">
 <section class="hero"><div class="wrap">
-  <div class="kicker"><span class="dot"></span>Sección 02 · Redes, sensores y dispositivos</div>
-  <h1>IoT &amp; Hardware.<br><span class="grad">7 proyectos.</span></h1>
+  <div class="kicker"><span class="dot"></span>Redes, sensores y dispositivos</div>
+  <h1>IoT &amp; Hardware</h1>
   <p class="lead">Acá viven los proyectos donde el código toca cables, radios y sensores. Redes que se auto-reparan, telemetría dentro de un router PowerPC, un puente LoRaWAN y válvulas que riegan sin depender de la nube.</p>
-  <div class="hero-actions"><a class="btn btn-primary" href="#catalogo">Ver el catálogo <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="btn btn-ghost" href="https://wanderc137.github.io/">Volver al portfolio</a></div>
-  <div class="hero-meta"><span><b>7</b> proyectos</span><span><b>7</b> GitHub Pages</span><span><b>100%</b> documentación</span><span><b>0</b> secretos</span></div>
+  <div class="hero-actions"><a class="btn btn-primary" href="../">Volver al portfolio <svg viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></a><a class="btn btn-ghost" href="https://github.com/wanderc137" target="_blank" rel="noopener">GitHub</a></div>
+  <div class="hero-meta"><span><b>7</b> proyectos</span><span><b>Redes, sensores y dispositivos</b></span><span><b>MIT</b> código abierto</span></div>
 </div></section>
-<section class="stats"><div class="wrap stats-inner"><div class="stat"><div class="stat-value">07</div><div class="stat-label">proyectos</div></div><div class="stat"><div class="stat-value">07</div><div class="stat-label">páginas propias</div></div><div class="stat"><div class="stat-value">3</div><div class="stat-label">secciones del portfolio</div></div><div class="stat"><div class="stat-value">∞</div><div class="stat-label">ganas de construir</div></div></div></section>
-<section class="section" id="catalogo"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">Catálogo · IoT &amp; Hardware</div><h2>Los 7 proyectos</h2><p class="section-sub">Cada tarjeta abre la página del proyecto. Ahí están la historia, la arquitectura, los documentos y el enlace al repositorio.</p></div>
-  <div class="board-grid">
-    <article class="project reveal" style="--a1:#00D8C0;--a2:#7CFF6B">
-      <div class="project-top"><span class="kind">Conectividad &amp; telemetría</span><span class="num">01</span></div>
-      <h3>netEspNow</h3>
-      <p>22 ESP8266 en tres niveles, rutas explícitas y auto-reparación.</p>
-      <div class="metric">22 nodos · 3 niveles</div>
-      <div class="project-foot">
-        <a class="project-link" href="https://wanderc137.github.io/netEspNow-v1.4/">Ver página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="mini" href="https://github.com/wanderc137/netEspNow-v1.4" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </article>
-    <article class="project reveal" style="--a1:#FFB020;--a2:#4D7CFE">
-      <div class="project-top"><span class="kind">Conectividad &amp; telemetría</span><span class="num">02</span></div>
-      <h3>NB2700 Telemetría</h3>
-      <p>Ping ICMP y consola AT dentro de un router PowerPC.</p>
-      <div class="metric">2 binarios C</div>
-      <div class="project-foot">
-        <a class="project-link" href="https://wanderc137.github.io/nb2700-telemetria/">Ver página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="mini" href="https://github.com/wanderc137/nb2700-telemetria" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </article>
-    <article class="project reveal" style="--a1:#22D3EE;--a2:#7CFF6B">
-      <div class="project-top"><span class="kind">Conectividad &amp; telemetría</span><span class="num">03</span></div>
-      <h3>CubeCell Bridge</h3>
-      <p>Puente serial ↔ LoRaWAN AU915 con downlinks y heartbeat.</p>
-      <div class="metric">AU915 · 30 s</div>
-      <div class="project-foot">
-        <a class="project-link" href="https://wanderc137.github.io/CubeCell-LoRaWAN-Node-v1.3/">Ver página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="mini" href="https://github.com/wanderc137/CubeCell-LoRaWAN-Node-v1.3" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </article>
-    <article class="project reveal" style="--a1:#FFB020;--a2:#FF5C5C">
-      <div class="project-top"><span class="kind">Hardware &amp; sensores</span><span class="num">04</span></div>
-      <h3>BusAccel</h3>
-      <p>ADXL345 + ESP8266: detecta impactos y publica solo lo grave.</p>
-      <div class="metric">0,58 g · 100 Hz</div>
-      <div class="project-foot">
-        <a class="project-link" href="https://wanderc137.github.io/BusAccel-8266-v4/">Ver página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="mini" href="https://github.com/wanderc137/BusAccel-8266-v4" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </article>
-    <article class="project reveal" style="--a1:#7CFF6B;--a2:#22D3EE">
-      <div class="project-top"><span class="kind">Hardware &amp; sensores</span><span class="num">05</span></div>
-      <h3>Válvulas Zigbee</h3>
-      <p>Riego local con SONOFF, Zigbee2MQTT y MQTT.</p>
-      <div class="metric">100% local</div>
-      <div class="project-foot">
-        <a class="project-link" href="https://wanderc137.github.io/valvulas-zigbee/">Ver página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="mini" href="https://github.com/wanderc137/valvulas-zigbee" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </article>
-    <article class="project reveal" style="--a1:#D4A843;--a2:#14F195">
-      <div class="project-top"><span class="kind">Autoatención &amp; pagos</span><span class="num">06</span></div>
-      <h3>Totem Autoatención</h3>
-      <p>Tótem Win32 en C con tickets ESC/POS y pantalla vertical.</p>
-      <div class="metric">1080×1920</div>
-      <div class="project-foot">
-        <a class="project-link" href="https://wanderc137.github.io/TotemAutoatencion/">Ver página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="mini" href="https://github.com/wanderc137/TotemAutoatencion" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </article>
-    <article class="project reveal" style="--a1:#14F195;--a2:#FFB020">
-      <div class="project-top"><span class="kind">Autoatención &amp; pagos</span><span class="num">07</span></div>
-      <h3>CashDro Controller</h3>
-      <p>Consola Python para ventas y niveles de efectivo por REST.</p>
-      <div class="metric">REST · polling</div>
-      <div class="project-foot">
-        <a class="project-link" href="https://wanderc137.github.io/CashDroController/">Ver página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="mini" href="https://github.com/wanderc137/CashDroController" target="_blank" rel="noopener">GitHub</a>
-      </div>
-    </article></div>
-</div></section>
-<section class="cta"><div class="wrap"><div class="cta-card reveal"><div class="kicker" style="justify-content:center">Seguir explorando</div><h2>Esto es solo una de las tres puertas.</h2><p>Volvé al catálogo general para entrar por Arduino UNO Q, IoT & Hardware o Software & IA.</p><div class="hero-actions"><a class="btn btn-primary" href="https://wanderc137.github.io/">Volver al portfolio</a><a class="btn btn-ghost" href="https://github.com/wanderc137" target="_blank" rel="noopener">Ver GitHub</a></div></div></div></section>
+<section class="stats"><div class="wrap stats-inner"><div class="stat"><div class="stat-value">07</div><div class="stat-label">proyectos en la sección</div></div><div class="stat"><div class="stat-value">100%</div><div class="stat-label">con documentación</div></div><div class="stat"><div class="stat-value">100%</div><div class="stat-label">con página propia</div></div><div class="stat"><div class="stat-value">MIT</div><div class="stat-label">licencia</div></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><div class="kicker">Catálogo · IoT &amp; Hardware</div><h2>Proyectos de la sección</h2><p class="section-sub">Siete sistemas que hablan con el mundo real: ESP-NOW, LoRaWAN, routers industriales, acelerómetros, Zigbee y hardware de autoatención.</p></div><div class="board-grid"><article class="project" style="--a1:#00D8C0;--a2:#7CFF6B">
+  <div class="project-top"><span class="kind">IoT &amp; Hardware</span><span class="num">01</span></div>
+  <h3>netEspNow</h3>
+  <p>22 ESP8266 en tres niveles, rutas explícitas y auto-reparación.</p>
+  <div class="metric">22 nodos · 3 niveles</div>
+  <div class="project-foot">
+    <a class="project-link" href="https://wanderc137.github.io/netEspNow-v1.4/" target="_blank" rel="noopener">Abrir página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="mini" href="https://github.com/wanderc137/netEspNow-v1.4" target="_blank" rel="noopener">Repo</a>
+  </div>
+</article><article class="project" style="--a1:#FFB020;--a2:#4D7CFE">
+  <div class="project-top"><span class="kind">IoT &amp; Hardware</span><span class="num">02</span></div>
+  <h3>NB2700 Telemetría</h3>
+  <p>Ping ICMP y consola AT dentro de un router PowerPC.</p>
+  <div class="metric">2 binarios C</div>
+  <div class="project-foot">
+    <a class="project-link" href="https://wanderc137.github.io/nb2700-telemetria/" target="_blank" rel="noopener">Abrir página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="mini" href="https://github.com/wanderc137/nb2700-telemetria" target="_blank" rel="noopener">Repo</a>
+  </div>
+</article><article class="project" style="--a1:#22D3EE;--a2:#7CFF6B">
+  <div class="project-top"><span class="kind">IoT &amp; Hardware</span><span class="num">03</span></div>
+  <h3>CubeCell Bridge</h3>
+  <p>Puente serial ↔ LoRaWAN AU915 con downlinks y heartbeat.</p>
+  <div class="metric">AU915 · 30 s</div>
+  <div class="project-foot">
+    <a class="project-link" href="https://wanderc137.github.io/CubeCell-LoRaWAN-Node-v1.3/" target="_blank" rel="noopener">Abrir página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="mini" href="https://github.com/wanderc137/CubeCell-LoRaWAN-Node-v1.3" target="_blank" rel="noopener">Repo</a>
+  </div>
+</article><article class="project" style="--a1:#FFB020;--a2:#FF5C5C">
+  <div class="project-top"><span class="kind">IoT &amp; Hardware</span><span class="num">04</span></div>
+  <h3>BusAccel</h3>
+  <p>ADXL345 + ESP8266: detecta impactos y publica solo lo grave.</p>
+  <div class="metric">0,58 g · 100 Hz</div>
+  <div class="project-foot">
+    <a class="project-link" href="https://wanderc137.github.io/BusAccel-8266-v4/" target="_blank" rel="noopener">Abrir página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="mini" href="https://github.com/wanderc137/BusAccel-8266-v4" target="_blank" rel="noopener">Repo</a>
+  </div>
+</article><article class="project" style="--a1:#7CFF6B;--a2:#22D3EE">
+  <div class="project-top"><span class="kind">IoT &amp; Hardware</span><span class="num">05</span></div>
+  <h3>Válvulas Zigbee</h3>
+  <p>Riego local con SONOFF, Zigbee2MQTT y MQTT.</p>
+  <div class="metric">100% local</div>
+  <div class="project-foot">
+    <a class="project-link" href="https://wanderc137.github.io/valvulas-zigbee/" target="_blank" rel="noopener">Abrir página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="mini" href="https://github.com/wanderc137/valvulas-zigbee" target="_blank" rel="noopener">Repo</a>
+  </div>
+</article><article class="project" style="--a1:#D4A843;--a2:#14F195">
+  <div class="project-top"><span class="kind">IoT &amp; Hardware</span><span class="num">06</span></div>
+  <h3>Totem Autoatención</h3>
+  <p>Tótem Win32 en C con tickets ESC/POS y pantalla vertical.</p>
+  <div class="metric">1080×1920</div>
+  <div class="project-foot">
+    <a class="project-link" href="https://wanderc137.github.io/TotemAutoatencion/" target="_blank" rel="noopener">Abrir página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="mini" href="https://github.com/wanderc137/TotemAutoatencion" target="_blank" rel="noopener">Repo</a>
+  </div>
+</article><article class="project" style="--a1:#14F195;--a2:#FFB020">
+  <div class="project-top"><span class="kind">IoT &amp; Hardware</span><span class="num">07</span></div>
+  <h3>CashDro Controller</h3>
+  <p>Consola Python para ventas y niveles de efectivo por REST.</p>
+  <div class="metric">REST · polling</div>
+  <div class="project-foot">
+    <a class="project-link" href="https://wanderc137.github.io/CashDroController/" target="_blank" rel="noopener">Abrir página <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a class="mini" href="https://github.com/wanderc137/CashDroController" target="_blank" rel="noopener">Repo</a>
+  </div>
+</article></div></div></section>
+<section class="cta"><div class="wrap"><div class="cta-card"><div class="kicker" style="justify-content:center">Seguir explorando</div><h2>Hay más en las otras secciones</h2><p>El portfolio está organizado en 3 criterios para que cada proyecto esté donde se espera.</p><div class="hero-actions"><a class="btn btn-primary" href="../">Ver las 3 secciones <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></div></section>
 </main>
-<footer><div class="wrap"><div class="foot"><div><div class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24"><path d="M12 3 3 8v8l9 5 9-5V8l-9-5z"/><path d="M3 8l9 5 9-5M12 13v10"/></svg></span>wanderc137</div><p>Portfolio personal de sistemas embebidos, IA aplicada, conectividad y automatización. Documentación abierta, código real.</p></div><div class="foot-links"><a href="https://wanderc137.github.io/">Portfolio</a><a href="https://github.com/wanderc137" target="_blank" rel="noopener">GitHub</a><a href="https://wanderc137.github.io/arduino-unoq/">Arduino UNO Q</a><a href="https://wanderc137.github.io/iot/">IoT</a><a href="https://wanderc137.github.io/software/">Software</a></div></div><div class="foot-bottom"><span>© 2026 wanderc137 · Licencia MIT</span><span>Hecho con criterio, no con plantillas</span></div></div></footer>
-<script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
+<footer><div class="wrap"><div class="foot"><div><div class="brand"><span class="brand-mark"><svg viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/><circle cx="12" cy="12" r="2.5"/></svg></span>wanderc137</div><p>Portfolio de proyectos reales: hardware, IoT, software e inteligencia artificial. Cada proyecto tiene su repositorio, su documentación y su página.</p></div><div><h4>Secciones</h4><div class="foot-links"><a href="../arduino-unoq/">Arduino UNO Q</a><a href="../iot/">IoT & Hardware</a><a href="../software/">Software & IA</a></div></div><div><h4>Enlaces</h4><div class="foot-links"><a href="https://github.com/wanderc137" target="_blank" rel="noopener">GitHub</a><a href="https://wanderc137.github.io/" target="_blank" rel="noopener">Portfolio live</a></div></div></div><div class="foot-bottom"><span>© 2026 wanderc137 · Licencia MIT</span><span>Diseñado y construido por wanderc137</span></div></div></footer>
 </body></html>
