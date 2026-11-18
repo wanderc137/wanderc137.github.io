@@ -1,6 +1,6 @@
 # wanderc137.github.io
 
-Portada del portfolio de **wanderc137**: 25 proyectos reales sobre **Arduino UNO Q**, IoT y software, documentados de punta a punta.
+Portada del portfolio de **wanderc137**: 26 proyectos reales sobre **Arduino UNO Q**, IoT y software, documentados de punta a punta.
 
 ## Proyectos
 
@@ -11,6 +11,7 @@ Portada del portfolio de **wanderc137**: 25 proyectos reales sobre **Arduino UNO
 | 03 | JarvisCAN | [wanderc137.github.io/JarvisCAN](https://wanderc137.github.io/JarvisCAN/) | [repo](https://github.com/wanderc137/JarvisCAN) |
 | 04 | JarvisUNOQ | [wanderc137.github.io/JarvisUNOQ](https://wanderc137.github.io/JarvisUNOQ/) | [repo](https://github.com/wanderc137/JarvisUNOQ) |
 | 05 | AnalizadorRostroUNOQ-v2 | [wanderc137.github.io/AnalizadorRostroUNOQ-v2](https://wanderc137.github.io/AnalizadorRostroUNOQ-v2/) | [repo](https://github.com/wanderc137/AnalizadorRostroUNOQ-v2) |
+| 05b | AnalizadorRostroUNOQ-v3 | [wanderc137.github.io/AnalizadorRostroUNOQ-v3](https://wanderc137.github.io/AnalizadorRostroUNOQ-v3/) | repo privado |
 | 06 | GestureCubeUNOQ | [wanderc137.github.io/GestureCubeUNOQ](https://wanderc137.github.io/GestureCubeUNOQ/) | [repo](https://github.com/wanderc137/GestureCubeUNOQ) |
 | 07 | Pasillo Seguro | [wanderc137.github.io/pasillo-seguro-unoq](https://wanderc137.github.io/pasillo-seguro-unoq/) | [repo](https://github.com/wanderc137/pasillo-seguro-unoq) |
 
