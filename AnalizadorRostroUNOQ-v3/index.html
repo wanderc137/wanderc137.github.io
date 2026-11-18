@@ -291,7 +291,8 @@ footer{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.08);pa
 @media(max-width:760px){.concept-grid,.fail-grid{grid-template-columns:1fr}.concept-side{border-left:0;padding-left:0}}
 
 </style>
-<link href="assets/community.css?v=5" rel="stylesheet"/></head>
+<link href="assets/community.css?v=5" rel="stylesheet"/><link href="rec/player.css?v=1" rel="stylesheet"/>
+</head>
 <body style="--accent:#22D3EE;--accent2:#E879F9">
 <div class="grid-overlay"></div>
 <div class="glow one"></div>
@@ -306,6 +307,7 @@ footer{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.08);pa
 <a href="#problema">Visión</a>
 <a href="#como">Cómo funciona</a>
 <a href="#arquitectura">Arquitectura</a>
+<a href="#video">Video</a>
 <a href="#docs">Documentación</a>
 <a href="#comunidad">Comunidad</a>
 <a class="btn btn-ghost" href="https://github.com/wanderc137/AnalizadorRostroUNOQ-v3" rel="noopener" style="padding:9px 15px" target="_blank">GitHub</a>
@@ -355,6 +357,45 @@ footer{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.08);pa
 <div class="timeline reveal"><div class="step"><div class="step-num">01</div><div class="step-body"><h3>Captura</h3><p>Logitech Brio USB o IP Webcam MJPEG por WiFi, con resolución reducida para el pipeline.</p></div></div><div class="step"><div class="step-num">02</div><div class="step-body"><h3>Detección</h3><p>YuNet a 320 px cada N frames, con fallback Haar si falta el modelo.</p></div></div><div class="step"><div class="step-num">03</div><div class="step-body"><h3>Tracker IoU</h3><p>Conserva la última predicción y evita el parpadeo de etiquetas entre frames.</p></div></div><div class="step"><div class="step-num">04</div><div class="step-body"><h3>Clasificación</h3><p>ONNX UTKFace o Caffe Levi &amp; Hassner, en ciclos separados de la detección.</p></div></div><div class="step"><div class="step-num">05</div><div class="step-body"><h3>Anotación y stream</h3><p>Cajas, etiquetas y HUD sobre MJPEG para cualquier navegador de la red.</p></div></div></div>
 </div>
 </section>
+
+<section class="section tight rec-section" id="video" style="--accent:#2E7DFF;--accent2:#14F195">
+<div class="wrap">
+<div class="rec-kicker">REC · VIDEO · 3:45</div>
+<h2 class="rec-h2">Analizador de Rostros v3 · creatividades e IP Webcam</h2>
+<p class="rec-lead">La V3 del analizador agrega creatividades propias para cada combinación de género y banda de edad, y un campo IP Webcam en la interfaz que prueba, aplica y persiste la fuente sin reiniciar el servicio. El resto del pipeline sigue igual: YuNet, tracker IoU, UTKFace y stream MJPEG, todo local.</p>
+<div class="rec-banner">
+<span class="rec-banner-icon">📋</span>
+<strong>Puedes copiar y pegar los comandos del video desde el video !!!</strong>
+<span>Pausá, seleccioná el texto de la terminal y copiá.</span>
+</div>
+<div class="rec-shell">
+<div class="rec-bar"><i></i><i></i><i></i><span class="rec-title">Analizador de Rostros v3 · creatividades e IP Webcam · asciinema</span><span class="rec-rec"><b></b>REC</span></div>
+<div class="rec-screen-wrap">
+<div class="rec-screen" id="rec-screen"></div>
+<div class="rec-poster" id="rec-poster">
+<div class="rec-kicker">ASCIINEMA · 3:45</div>
+<h3>Analizador de Rostros v3 · creatividades e IP Webcam</h3>
+<p>La V3 del analizador agrega creatividades propias para cada combinación de género y banda de edad, y un campo IP Webcam en la interfaz que prueba, aplica y persiste la fuente sin reiniciar el servicio. El resto del pipeline sigue igual: YuNet, tracker IoU, UTKFace y stream MJPEG, todo local.</p>
+<div class="rec-poster-meta">AnalizadorRostroUNOQ-v3 · código real</div>
+<button class="rec-btn rec-primary" id="rec-start" type="button">▶ Reproducir</button>
+</div>
+</div>
+<div class="rec-controls">
+<button class="rec-btn rec-primary" id="rec-play" type="button">▶ Reproducir</button>
+<button class="rec-btn" id="rec-restart" type="button">↺ Reiniciar</button>
+<input class="rec-progress" id="rec-range" type="range" min="0" max="1000" value="0" aria-label="Progreso"/>
+<span class="rec-time" id="rec-time">0:00 / 3:45</span>
+<select class="rec-speed" id="rec-speed" aria-label="Velocidad"><option value="1">1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select>
+<button class="rec-btn" id="rec-full" type="button" title="Pantalla completa">⛶</button>
+<button class="rec-btn" id="rec-copy" type="button">⧉ Copiar comandos</button>
+<a class="rec-download" href="rec/AnalizadorRostroUNOQ-v3.cast" download>descargar .cast</a>
+</div>
+</div>
+<p class="rec-note">Los fragmentos corresponden al código real de la V3 en las líneas indicadas. Las salidas de los comandos son ilustrativas y usan direcciones de documentación (192.0.2.0/24), no la IP de la demo. El servicio conserva el nombre legado unoq-app-v2; el puerto es 8001.</p>
+<div class="rec-chapters"><span class="rec-chip"><b>0:06</b> EL PROBLEMA</span><span class="rec-chip"><b>0:23</b> ARQUITECTURA</span><span class="rec-chip"><b>0:40</b> DETECCIÓN</span><span class="rec-chip"><b>0:57</b> CLASIFICACIÓN</span><span class="rec-chip"><b>1:15</b> SEGMENTACIÓN</span><span class="rec-chip"><b>1:33</b> IP WEBCAM</span><span class="rec-chip"><b>1:51</b> PROBAR</span><span class="rec-chip"><b>2:07</b> CAMBIO EN CALIENTE</span><span class="rec-chip"><b>2:26</b> PERSISTENCIA</span><span class="rec-chip"><b>2:43</b> STREAM</span><span class="rec-chip"><b>3:01</b> INTERFAZ</span><span class="rec-chip"><b>3:17</b> CÓMO EJECUTARLO</span></div>
+</div>
+</section>
+
 <section class="section tight" id="arquitectura">
 <div class="wrap">
 <div class="section-head reveal">
@@ -469,5 +510,7 @@ footer{position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.08);pa
 </script>
 <script>window.PORTFOLIO_COMMUNITY = {"account": "wanderc137", "repo": "AnalizadorRostroUNOQ-v3", "coinNamespace": "wanderc137-analizadorrostrounoq-v3-coins-v1", "faqs": [{"q": "¿Qué detecta?", "a": "Rostros con <b>YuNet</b>, edad y género con un <b>ONNX UTKFace MobileNetV2</b>; también tiene fallback Caffe Levi & Hassner."}, {"q": "¿Qué precisión tiene?", "a": "84,56 % de género, 48,17 % de edad exacta y 83,8 % ±1 bucket en el conjunto de validación; no es un sistema biométrico."}, {"q": "¿El video sale de la placa?", "a": "No. La cámara entra localmente, el backend procesa y sirve <b>MJPEG</b>; no se suben frames a la nube."}, {"q": "¿Qué cámara funciona?", "a": "Una cámara IP por HTTP fue validada; la Brio USB no se probó por falta de hub USB-C con PD."}, {"q": "¿Cuáles son los límites?", "a": "Sesgo del dataset, edad aproximada, ~15 fps en la UNO Q y una sola cámara por instancia."}]};</script>
 <script defer="" src="assets/community.js?v=6"></script>
+<script defer src="rec/AnalizadorRostroUNOQ-v3.cast.js?v=1"></script>
+<script defer src="rec/player.js?v=1"></script>
 </body>
 </html>
